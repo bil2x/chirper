@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Chirp;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class ChirpController extends Controller
 {
@@ -12,7 +13,9 @@ class ChirpController extends Controller
      */
     public function index()
     {
-        return response('Hello World');
+        return Inertia::render('Chirps/Index',[
+            
+        ]);
     }
 
     /**
